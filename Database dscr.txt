@@ -1,0 +1,26 @@
+================Database=============
+name:As fashion db
+-----------users table--------------------------
+users:
+	user_id (pk auto increment)
+	first_name
+	last_name
+	date_of_birth
+	phone_number
+	email
+	password
+	country
+
+------------Product table-----------------------
+product_id (pk auto incrument)
+product_name
+price
+product_desc
+product_img
+product_keyword
+cat_id
+adding_date
+sizes
+colors
+
+
