@@ -126,6 +126,14 @@ include('../controllers/cart_controller.php');
                                 <h5 class="font-weight-bold">Total</h5>
                                 <input class="font-weight-bold" type="tel" name="amt" id="amount" value="<?php echo array_sum($total_price) +20; ?>" disabled>
                             </div>
+                            <input type="hidden" name="product_id" value="
+                            <?php
+                            $product_id=array();
+                            foreach($carts as $cart){
+                                
+                            }
+                            ?>
+                            ">
                             <button type="submit" onclick="payWithPaystack()" class="btn btn-block btn-primary my-3 py-3" <?php if (array_sum($total_price) +20==20) {
                                 echo 'disabled';
                             } ?>> Pay </button>

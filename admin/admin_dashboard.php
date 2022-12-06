@@ -880,8 +880,8 @@ include ('../controllers/product_controller.php');
                             echo'
                             <tr>
                               <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>'.$order['first_name'].' '.$order['last_name'].'</strong></td>
-                              <td>Albert Cook</td>
-                              <td>'.$order['amt'].'</td>
+                              <td>'.$order['product_name'].'</td>
+                              <td>'.$order['price'].'</td>
                               <td><span class="badge bg-label-primary me-1">'.$order['payment_date'].'</span></td>
                               <td><span class="badge bg-label-primary me-1">'.$order['order_status'].'</span></td>
                               <td>
@@ -906,7 +906,7 @@ include ('../controllers/product_controller.php');
                                     </form>
                                   </div>
                               </div>
-                                <a  href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                <a  href="../functions/delete.php?action=delete_order&order_id='.$order['order_id'].'"><i class="bx bx-trash me-1"></i> Delete</a>
                               </td>
                             </tr>';
                           }

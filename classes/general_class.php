@@ -12,14 +12,11 @@ require("../settings/db_class.php");
 
 class general_class extends db_connection
 {
-	//--ADD--//
-	public function add_controller($a,$b){
-		//write  query
-		// execute
-		$sql= 'rr';
-		return db_query($sql);
-
-	}
+	//--DELETE--//
+	function delete_order($order_id){
+        $sql="DELETE FROM `orders` WHERE order_id='$order_id'";
+        return $this->db_query($sql);
+    }
 
 	//--SELECT--//
 
@@ -29,7 +26,7 @@ class general_class extends db_connection
 
 
 
-	//--DELETE--//
+	
 	
 
 }

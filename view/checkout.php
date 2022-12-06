@@ -1,3 +1,7 @@
+<?php
+include('../settings/core.php');
+include('../controllers/cart_controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 

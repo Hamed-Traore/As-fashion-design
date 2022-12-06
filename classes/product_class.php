@@ -107,8 +107,9 @@ class product_class extends db_connection
     //orders
     function select_all_orders()
     {
-        $sql = "SELECT first_name, last_name, amt,payment_date,order_status, orders.order_id FROM `orders`
-        INNER JOIN `payment` INNER JOIN `users` WHERE payment.order_id=orders.order_id AND users.user_id=payment.user_id 
+        $sql = "SELECT users.first_name, users.last_name, payment.payment_date, orders.order_date,orders.order_status,orders.order_id, products.product_name,products.price, orderdetails.quantity
+        FROM `orders` INNER JOIN `payment` INNER JOIN `users` INNER JOIN products INNER JOIN orderdetails 
+        WHERE payment.order_id=orders.order_id AND users.user_id=payment.user_id AND orderdetails.product_id=products.product_id
         ORDER BY `payment`.`payment_date` ASC";
         return $this->db_fetch_all($sql);
     }

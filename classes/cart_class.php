@@ -68,6 +68,12 @@ class CartClass extends db_connection
         $sql = "SELECT COUNT(*)FROM cart WHEREcart.user_id=$c_id;";
         return $this->db_fetch_one($sql);
     }
+    // add to order
+    function insert_order_details($order,$product_id,$quantity)
+    {
+        $sql="INSERT INTO `orderdetails`(`order_id`, `product_id`, `quantity`) VALUES ('$order','$product_id','$quantity')";
+        return $this->db_query($sql);
+    }
 }
 
 

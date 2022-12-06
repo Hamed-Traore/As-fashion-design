@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 03:30 AM
+-- Generation Time: Dec 06, 2022 at 06:27 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -34,13 +34,6 @@ CREATE TABLE `cart` (
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`product_id`, `user_id`, `ip_address`, `quantity`) VALUES
-(2, 2, '::1', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -63,6 +56,26 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orderdetails`
+--
+
+CREATE TABLE `orderdetails` (
+  `order_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orderdetails`
+--
+
+INSERT INTO `orderdetails` (`order_id`, `product_id`, `quantity`) VALUES
+(7, 1, 1),
+(7, 2, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `orders`
 --
 
@@ -79,9 +92,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `user_id`, `invoice_no`, `order_date`, `order_status`) VALUES
-(1, 2, 1673669150, '0000-00-00', 'in progress'),
-(2, 1, 495534526, '0000-00-00', 'on hold'),
-(3, 1, 565554045, '0000-00-00', 'on hold');
+(7, 2, 1139542628, '2022-12-06', 'in progress');
 
 -- --------------------------------------------------------
 
@@ -103,9 +114,7 @@ CREATE TABLE `payment` (
 --
 
 INSERT INTO `payment` (`pay_id`, `amt`, `user_id`, `order_id`, `currency`, `payment_date`) VALUES
-(1, 920, 2, 1, 'GHS', '0000-00-00'),
-(2, 220, 1, 2, 'GHS', '2022-12-05'),
-(3, 220, 1, 3, 'GHS', '2022-12-05');
+(7, 520, 2, 7, 'GHS', '2022-12-06');
 
 -- --------------------------------------------------------
 
@@ -176,6 +185,13 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `orderdetails`
+--
+ALTER TABLE `orderdetails`
+  ADD KEY `order_id` (`order_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -217,13 +233,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -247,6 +263,13 @@ ALTER TABLE `users`
 ALTER TABLE `cart`
   ADD CONSTRAINT `Product_link` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `user_link` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `orderdetails`
+--
+ALTER TABLE `orderdetails`
+  ADD CONSTRAINT `order_fk` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `product_fk` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `orders`

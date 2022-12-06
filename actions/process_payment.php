@@ -61,6 +61,12 @@ $ref=$_GET['reference'];
         $order_status='on hold';
         $order_date=date('Y-m-d');
         $order= add_order_controller($user_id,$invoice_no,$order_date,$order_status);
+        $cart=get_all_cart_info_controller($user_id);
+        foreach ($cart as $item) {
+          $product_id=$item['product_id'];
+          $quantity=$item['quantity'];
+          insert_order_details_ctr($order,$product_id,$quantity);
+        }
         // echo '<br>';
         // var_dump($order);
         // echo '<br>';

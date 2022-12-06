@@ -79,11 +79,12 @@ if (isset($_POST['Update'])) {
 if (isset($_POST['update_status'])) {
     $order_status=$_POST['order_status'];
     $order_id=$_POST['order_id'];
-    $update_status= update_status_ctr($order_id,$order_status);
+    $update_result= update_status_ctr($order_id,$order_status);
+    var_dump($update_result);
     if ($update_result==false) {
-        header( "Location: ../admin/update_product.php?error=<script>alert('Could not add product')</script>");
+        header( "Location: ../admin/admin_dashboard.php?error=<script>alert('Could not add product')</script>");
     }else {
-        header( "Location: ../admin/product.php?Successfully updated");
+        header( "Location: ../admin/admin_dashboard.php?Successfully updated");
     }
 }
 

@@ -65,3 +65,10 @@ function count_items_controller($c_id)
     $count=new CartClass();
     return $count->count_items($c_id);
 }
+
+// order details
+function insert_order_details_ctr($order,$product_id,$quantity)
+{
+    $insert= new CartClass ();
+    return $insert-> insert_order_details($order,$product_id,$quantity);
+}
