@@ -6,8 +6,9 @@
 // define('DB', 'as_fashion_db');
 
 //Database heroku credentials
+// mysql://b0020d6ce24a99:676d5fc9@us-cdbr-east-06.cleardb.net/heroku_e38a23c2ee0e554?reconnect=true$i++;
 define('SERVER','us-cdbr-east-06.cleardb.net');
-define('HOST','bd775049842a98');
-define('PASSWD','e7e7881e');
-define('DB', 'heroku_94a1840aa90507d');
+define('HOST','b0020d6ce24a99');
+define('PASSWD','676d5fc9');
+define('DB', 'heroku_e38a23c2ee0e554');
 ?>
