@@ -313,7 +313,7 @@
                     <span class="contact-info__icon"><i class="ti-email"></i></span>
                     <div class="media-body">
                         <h3>Alfredtanobile@gmail.com</h3>
-                        <p>Send us your query anytime!</p>
+                        <p>Send us your remarque, cancern, or contribution anytime!</p>
                     </div>
                 </div>
                 <div class="media contact-info">
@@ -429,31 +429,7 @@
         <!-- Footer Start-->
         <div class="footer-area footer-padding">
             <div class="container">
-                <div class="row justify-content-center">
-                        <div class="single-footer-caption ">
-                            <div class="single-footer-caption ">
-                                <!-- logo -->
-                                <div class="footer-logo ">
-                                    <a href="index.html"><img src="view/assets/img/logo/logo.ico" alt=""style="height: 50px ; width:50px;"></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p>We are here for you!!!</p>
-                                    </div>
-                                    <ul class="">
-                                        <li class="number"><a href="#">(+233) 055 577 4300</a></li>
-                                        <li class="number2"><a href="#">(+233) 057 207 2989</a></li>
-                                    </ul>
-                                </div>
-                                <!-- social -->
-                                <div class="footer-social">
-                                    <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-                                    <a href="https://www.facebook.com/profile.php?id=100070981823191"><i class="fab fa-facebook-f"></i></a>
-                                    <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                </div>
+               
                 <div class="row justify-content-center">
                 <div class="footer-bottom-area">
                     <div class="container">

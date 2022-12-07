@@ -29,6 +29,24 @@ include("../classes/CustomerClass.php");
 //     }
     
 // }
+// select one user
+function get_user_ctr($user_id)
+{
+    $user= new CustomerClass ();
+    return $user->get_user_by_id($user_id);
+}
+// select all users
+function get_all_user_ctr()
+{
+    $users=new CustomerClass ();
+    return $users->get_all_user();
+}
+// search user
+function search_user_ctr($key)
+{
+    $search= new CustomerClass ();
+    return $search->search_user($key);
+}
 
 function register_controller($first_name,$last_name,$date_of_birth,$phone_number,$email,$password,$country,$user_role)
 {
@@ -62,8 +80,9 @@ function loginUser_controller($customer_email,$customer_pass)
             return false;
         } else 
         {
-            //check if password match    
+            //check if password match 
             $matching= password_verify($customer_pass,$user["password"]);
+            var_dump($matching);
             if ($matching!==true)
             {
                 return false;
@@ -79,13 +98,19 @@ function loginUser_controller($customer_email,$customer_pass)
          }
        
     } 
+    
 
 
 
 //--SELECT--//
 
 //--UPDATE--//
-
+function profile_update_ctr($user_id,$first_name,$last_name,$email,$phone_number,$country)
+{
+    $update= new CustomerClass ();
+    return $update->profile_update($user_id,$first_name,$last_name,$email,$phone_number,$country);
+}
 //--DELETE--//
+
 
 ?>
