@@ -5,8 +5,9 @@ $ip_address=$_SERVER['REMOTE_ADDR'];
 $product_id=$_GET['product_id'];
 $quantity=1;//default
 $user_id;
-var_dump($check=check_for_duplicate_controller($user_id,$product_id));
-// if ($check==NULL) {
+$check=check_for_duplicate_controller($user_id,$product_id);
+if ($check==NULL) {
+  echo 'nullllllllllllllllllll';
 //     //add to cart
 //     $add=add_to_cart_controller($product_id,$user_id,$ip_address,$quantity);
 //     if ($add==false) {
@@ -14,9 +15,10 @@ var_dump($check=check_for_duplicate_controller($user_id,$product_id));
 //     }else {
 //         header( "Location: ../view/shop.php?msg=Successfully added");
 //     }
-// }else {
+}else {
+  echo 'not null';
 //     header( "Location: ../view/cart.php?msg=please increase the quantity here");
-// }
+}
 // var_dump($check);
 // echo '<br>'; 
 // echo 'User IP Address: '.$_SERVER['REMOTE_ADDR']; 
