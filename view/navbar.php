@@ -40,13 +40,13 @@
                             <a href="customer_dashboard.php" class="nav-item nav-link">Dashboard</a>
                             <a href="shop.php" class="nav-item nav-link">Shop</a>
                             <a href="detail.php" class="nav-item nav-link">Shop Detail</a>
-                            <div class="nav-item dropdown">
+<!--                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="cart.php" class="dropdown-item">Shopping Cart</a>
                                     <a href="checkout.php" class="dropdown-item">Checkout</a>
                                 </div>
-                            </div>
+                            </div> -->
                             <a href="contact1.php" class="nav-item nav-link active">Contact</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
