@@ -9,15 +9,15 @@ $check=check_for_duplicate_controller($user_id,$product_id);
 if ($check==NULL) {
     //add to cart
 //     echo 'product: '.$product_id.' user: '.$user_id;
-    var_dump( $add=add_to_cart_controller($product_id,$user_id,$ip_address,$quantity));
-//     if ($add==false) {
-//         header( "Location: ../view/customer_dashboard.php?msg=please Item couldnot be added to cart");
-//     }else {
-//         header( "Location: ../view/shop.php?msg=Successfully added");
-//     }
+//     var_dump( $add=add_to_cart_controller($product_id,$user_id,$ip_address,$quantity));
+    if ($add==false) {
+        header( "Location: ../view/customer_dashboard.php?msg=please Item couldnot be added to cart");
+    }else {
+        header( "Location: ../view/shop.php?msg=Successfully added");
+    }
 }else {
-  echo 'not nullllllllllll';
-//     header( "Location: ../view/cart.php?msg=please increase the quantity here");
+//   echo 'not nullllllllllll';
+    header( "Location: ../view/cart.php?msg=please increase the quantity here");
 }
 // var_dump($check);
 // echo '<br>'; 
