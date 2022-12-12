@@ -8,7 +8,7 @@ $user_id;
 $check=check_for_duplicate_controller($user_id,$product_id);
 if ($check==NULL) {
     //add to cart
-    echo $product_id.' '.$user_id.' '.$ip_address.' '.$quantity;
+    echo 'product: '.$product_id.' user: '.$user_id;
 //      $add=add_to_cart_controller($product_id,$user_id,$ip_address,$quantity);
 //     if ($add==false) {
 //         header( "Location: ../view/customer_dashboard.php?msg=please Item couldnot be added to cart");
