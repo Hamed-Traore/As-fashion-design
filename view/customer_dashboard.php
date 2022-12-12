@@ -82,14 +82,14 @@ $cats=select_all_category_controller();
                             <a href="customer_dashboard.php" class="nav-item nav-link ">Dashboard</a>
                             <a href="shop.php" class="nav-item nav-link">Shop</a>
                             <!-- <a href="detail.html" class="nav-item nav-link">Shop Detail</a> -->
-                            <div class="nav-item dropdown">
+<!--                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="cart.html" class="dropdown-item">Shopping Cart</a>
                                     <a href="checkout.html" class="dropdown-item">Checkout</a>
                                 </div>
                             </div>
-                            <a href="contact1.php" class="nav-item nav-link">Contact</a>
+                            <a href="contact1.php" class="nav-item nav-link">Contact</a> -->
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             <a href="../" class="nav-item nav-link">Logout</a>
