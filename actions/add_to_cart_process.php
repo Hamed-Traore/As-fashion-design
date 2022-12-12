@@ -7,9 +7,8 @@ $quantity=1;//default
 $user_id;
 $check=check_for_duplicate_controller($user_id,$product_id);
 if ($check==NULL) {
-  echo 'nullllllllllllllllllll';
-//     //add to cart
-//     $add=add_to_cart_controller($product_id,$user_id,$ip_address,$quantity);
+    //add to cart
+     var_dump($add=add_to_cart_controller($product_id,$user_id,$ip_address,$quantity));
 //     if ($add==false) {
 //         header( "Location: ../view/customer_dashboard.php?msg=please Item couldnot be added to cart");
 //     }else {
