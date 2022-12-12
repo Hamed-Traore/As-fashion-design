@@ -34,7 +34,7 @@ $ref=$_GET['reference'];
 
     CURLOPT_HTTPHEADER => array(
 
-      "Authorization: Bearer sk_test_87b59dfe9652d4a35f8e821dd4a4dd9e5946491a",
+      "Authorization: Bearer sk_live_497a3a223893acf3ff8ecfd4dce1158b2fc9b088",
 
       "Cache-Control: no-cache",
 
