@@ -1,10 +1,10 @@
 <?php
 include('../settings/core.php');
 include('../controllers/cart_controller.php');
-echo $ip_address=$_SERVER['REMOTE_ADDR'];
-echo $product_id=$_GET['product_id'];
-echo $quantity=1;//default
-echo $user_id;
+$ip_address=$_SERVER['REMOTE_ADDR'];
+$product_id=$_GET['product_id'];
+$quantity=1;//default
+$user_id;
 $check=check_for_duplicate_controller($user_id,$product_id);
 if ($check==NULL) {
     //add to cart
